@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS Tracks (
 );
 CREATE TABLE IF NOT EXISTS TracksCompilations (
 	Track_id       INTEGER REFERENCES Tracks(id),
-	Compilation_id INTEGER REFERENCES Compiliations_of_tracks(id),
+	Compilation_id INTEGER REFERENCES Compilipublic.tracksations_of_tracks(id),
 	CONSTRAINT pk1 PRIMARY KEY (Track_id, Compilation_id)
 );
 CREATE TABLE IF NOT EXISTS Genre_of_music (

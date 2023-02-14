@@ -1,19 +1,19 @@
 INSERT INTO genre_of_music (title)
 VALUES ('Rock'),
-	   ('Hip Hop'),
-	   ('Pop'),
-	   ('Dance'),
-	   ('Metal');
+       ('Hip Hop'),
+       ('Pop'),
+       ('Dance'),
+       ('Metal');
 
 INSERT INTO executors (nickname) 
 VALUES ('30 Seconds to Mars'),
-	   ('ATL'),
-	   ('Руки Вверх'),
-	   ('OxxxyMiron'),
-	   ('25/17'),
-	   ('Eminem'),
-	   ('Rammstein'),
-	   ('Scooter');
+       ('ATL'),
+       ('Руки Вверх'),
+       ('OxxxyMiron'),
+       ('25/17'),
+       ('Eminem'),
+       ('Rammstein'),
+       ('Scooter');
 	  
 INSERT INTO albums_of_executor (title, year_of_release)
 VALUES ('America', '2018'),
