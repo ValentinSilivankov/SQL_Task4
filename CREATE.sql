@@ -1,22 +1,23 @@
 CREATE TABLE IF NOT EXISTS Compiliations_of_tracks (
 	id SERIAL       PRIMARY KEY,
-	Title           TEXT    NOT NULL,
-	Year_of_release INTEGER NOT NULL
+	Title           TEXT         NOT NULL,
+	Year_of_release INTEGER      NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Albums_of_executor (
-    id SERIAL       PRIMARY KEY,
-	Title           TEXT        NOT NULL,
-	Year_of_release INTEGER     NOT NULL
+	id SERIAL       PRIMARY KEY,
+	Title           TEXT         NOT NULL,
+	Year_of_release INTEGER      NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Tracks (
-	id SERIAL        PRIMARY KEY,
-	Tracks_title     VARCHAR(30)    NOT NULL,
-	Duration         TIME(0)        NOT NULL,
-	Album_id         INTEGER        NOT NULL 
+	id SERIAL    PRIMARY KEY,
+	Tracks_title VARCHAR(30)  NOT NULL,
+	Duration     TIME(0)      NOT NULL,
+	Album_id     INTEGER      NOT NULL
 	REFERENCES Albums_of_executor(id)
 );
+
 CREATE TABLE IF NOT EXISTS TracksCompilations (
 	Track_id       INTEGER REFERENCES Tracks(id),
 	Compilation_id INTEGER REFERENCES Compilipublic.tracksations_of_tracks(id),
@@ -24,11 +25,11 @@ CREATE TABLE IF NOT EXISTS TracksCompilations (
 );
 CREATE TABLE IF NOT EXISTS Genre_of_music (
 	id SERIAL PRIMARY KEY,
-	Title     VARCHAR(30) NOT NULL
+	Title     VARCHAR(30)  NOT NULL
 );
 CREATE TABLE IF NOT EXISTS Executors (
 	id SERIAL PRIMARY KEY,
-	Nickname  VARCHAR(30) NOT NULL
+	Nickname  VARCHAR(30)  NOT NULL
 );
 CREATE TABLE IF NOT EXISTS ExecutorsGenre (
 	Executors_id   INTEGER REFERENCES Executors(id),
